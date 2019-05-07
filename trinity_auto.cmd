@@ -14,9 +14,7 @@ title Загрузка..  -  Trinity Auto
 :working
 	title Ввод ключа  -  Trinity Auto
 	set /p enteredkey="> Введите полученный ключ: "
-	psvimg-extract -K %enteredkey% game/game.psvimg game_dec|findstr "invalid key" && (
-		echo Неверный ключ. && pause>nul && cls && goto working
-	)
+	psvimg-extract -K %enteredkey% game/game.psvimg game_dec||findstr "invalid key" > tmp.txt
 	pause>nul & cls & goto working
 
 
