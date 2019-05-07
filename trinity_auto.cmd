@@ -1,7 +1,6 @@
 @echo off & chcp 65001>nul
 title Загрузка..  -  Trinity Auto
 :checking
-	if NOT exist "%cd%/cyggcc_s-1.dll" (goto error)
 	if NOT exist "%cd%/cyggcrypt-20.dll" (goto error)
 	if NOT exist "%cd%/cyggpg-error-0.dll" (goto error)
 	if NOT exist "%cd%/cygintl-8.dll" (goto error)
