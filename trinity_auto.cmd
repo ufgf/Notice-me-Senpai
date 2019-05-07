@@ -2,15 +2,25 @@
 title Загрузка..  -  Trinity Auto
 :checking
 	if NOT exist "%working-direct%/cyggcc_s-1.dll" (goto error)
+	pause>nul & cls & goto listofcommand
 	if NOT exist "%working-direct%/cyggcrypt-20.dll" (goto error)
+	pause>nul & cls & goto listofcommand
 	if NOT exist "%working-direct%/cyggpg-error-0.dll" (goto error)
+	pause>nul & cls & goto listofcommand
 	if NOT exist "%working-direct%/cygintl-8.dll" (goto error)
+	pause>nul & cls & goto listofcommand
 	if NOT exist "%working-direct%/cygwin1.dll" (goto error)
+	pause>nul & cls & goto listofcommand
 	if NOT exist "%working-direct%/cygz.dll" (goto error)
+	pause>nul & cls & goto listofcommand
 	if NOT exist "%working-direct%/psvimg-create.exe" (goto error)
+	pause>nul & cls & goto listofcommand
 	if NOT exist "%working-direct%/psvimg-extract.exe" (goto error)
+	pause>nul & cls & goto listofcommand
 	if NOT exist "%working-direct%/psvimg-keyfind.exe" (goto error)
+	pause>nul & cls & goto listofcommand
 	if NOT exist "%working-direct%/psvmd-decrypt.exe" (goto error)
+	pause>nul & cls & goto listofcommand
 
 :working
 	set /p enteredkey="> Введите полученный ключ: "
