@@ -1,26 +1,16 @@
-@echo off & chcp 65001>nul & set "working-direct=%~dp0"
+@echo off & chcp 65001>nul
 title Загрузка..  -  Trinity Auto
 :checking
-	if NOT exist "%working-direct%/cyggcc_s-1.dll" (goto error)
-	pause>nul & cls & goto listofcommand
-	if NOT exist "%working-direct%/cyggcrypt-20.dll" (goto error)
-	pause>nul & cls & goto listofcommand
-	if NOT exist "%working-direct%/cyggpg-error-0.dll" (goto error)
-	pause>nul & cls & goto listofcommand
-	if NOT exist "%working-direct%/cygintl-8.dll" (goto error)
-	pause>nul & cls & goto listofcommand
-	if NOT exist "%working-direct%/cygwin1.dll" (goto error)
-	pause>nul & cls & goto listofcommand
-	if NOT exist "%working-direct%/cygz.dll" (goto error)
-	pause>nul & cls & goto listofcommand
-	if NOT exist "%working-direct%/psvimg-create.exe" (goto error)
-	pause>nul & cls & goto listofcommand
-	if NOT exist "%working-direct%/psvimg-extract.exe" (goto error)
-	pause>nul & cls & goto listofcommand
-	if NOT exist "%working-direct%/psvimg-keyfind.exe" (goto error)
-	pause>nul & cls & goto listofcommand
-	if NOT exist "%working-direct%/psvmd-decrypt.exe" (goto error)
-	pause>nul & cls & goto listofcommand
+	if NOT exist "%cd%/cyggcc_s-1.dll" (goto error)
+	if NOT exist "%cd%/cyggcrypt-20.dll" (goto error)
+	if NOT exist "%cd%/cyggpg-error-0.dll" (goto error)
+	if NOT exist "%cd%/cygintl-8.dll" (goto error)
+	if NOT exist "%cd%/cygwin1.dll" (goto error)
+	if NOT exist "%cd%/cygz.dll" (goto error)
+	if NOT exist "%cd%/psvimg-create.exe" (goto error)
+	if NOT exist "%cd%/psvimg-extract.exe" (goto error)
+	if NOT exist "%cd%/psvimg-keyfind.exe" (goto error)
+	if NOT exist "%cd%/psvmd-decrypt.exe" (goto error)
 
 :working
 	set /p enteredkey="> Введите полученный ключ: "
