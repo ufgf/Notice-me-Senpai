@@ -14,9 +14,12 @@ title Загрузка..  -  Trinity Auto
 :working
 	title Ввод ключа  -  Trinity Auto
 	set /p enteredkey="> Введите полученный ключ: "
-	psvimg-extract -K %enteredkey% game/game.psvimg game_dec|findstr "invalid key">nul && echo Неверный ключ. & pause>nul & cls & goto working
-	pause>nul & cls & goto listofcommand
+	psvimg-extract -K %enteredkey% game/game.psvimg game_dec|findstr "invalid key" >nul 2>&1 && (
+		echo Неверный ключ. && pause>nul && cls && goto working
+	)
+	pause>nul & cls & goto working
 
 
 :error
+	title Ошибка  -  Trinity Auto
 	echo. Скрипт лежит не в папке с psvimgtools. & pause>nul & exit
